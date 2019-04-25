@@ -62,8 +62,13 @@ class FlowerView{
 
       const deleteButton = document.createElement('button');
       deleteButton.classList.add("ui", "basic", "red", "button",);
-      // deleteButton.id = `delete ${flower.id}`;
+      deleteButton.value = flower.id;
       deleteButton.innerHTML = "Delete";
+      deleteButton.addEventListener('click', (event) => {
+        console.log(event.target.value);
+        
+      });
+
 
       const updateButton = document.createElement("div", "button");
       updateButton.classList.add("ui", "basic", "blue", "button");

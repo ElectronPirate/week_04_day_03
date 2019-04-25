@@ -16,15 +16,19 @@ router.get('/', function(req, res){
 router.post('/', function(req, res) {
   SqlRunner.run("INSERT INTO flowers (name, sun, water, soil) VALUES ($1, $2, $3, $4)", [req.body.name, req.body.sun, req.body.water, req.body.soil])
   .then((result) => {
-    res.status(201).json(result);
+    SqlRunner.run('SELECT * FROM flowers').then(result =>{
+      res.status(200).json(result.rows);
+    });
   });
 });
 
 router.delete('/:id', function(req, res) {
   SqlRunner.run("DELETE FROM flowers WHERE id = $1", [req.params.id])
   .then((result) => {
-    res.status(200).json(result);
-  });
+    SqlRunner.run('SELECT * FROM flowers').then(results =>{
+      res.status(200).json(results.rows);
+    });
+    });
 });
 
 
