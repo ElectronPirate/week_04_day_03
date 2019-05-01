@@ -18,10 +18,25 @@ class RequestHelper{
       .then((response) => response.json());
   }
 
-  // delete() {
-  //   return fetch(this.url)
-  //   .then((res) => res.json());
+  delete(payload) {
+    return fetch(this.url, {
+      method: 'DELETE',
+      // body: JSON.stringify(payload),
+      // headers: { 'Content-Type': 'application/json' }
+    })
+      .then((response) => response.json());
+  }
+
+  // put(payload) {
+  //   return fetch(this.url, {
+  //     method: 'PUT',
+  //     body: JSON.stringify(payload),
+  //     headers: { 'Content-Type': 'application/json' }
+  //   })
+  //     .then((response) => response.json());
   // }
+
+
 
 }
 

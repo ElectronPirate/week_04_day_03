@@ -6,55 +6,178 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/bundle.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="main.css">
     <title>House Plants</title>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <nav>
+          <h1 class="home"><a href="index.html">H<span>o</span>me</a></h1>
+          <ul>
+            <li><a href="#" id="addPlant">Add Plant</a></li>
+            <li><a href="#" id="plants">Plants</a></li>
+            <li><a href="#" id="tracker">Tracker</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </header>
+
     <div class="ui container">
-      <h1>House Plants</h1>
+
+      <div class="splash-header">
+          <h1>My Plants</h1>
+      </div>
 
       <form class="ui form" id="flower-form">
 
-        <div class="four fields">
+        <div class="multi-fields">
+
+          <!-- <h3>Enter Plant information:</h3> -->
 
             <div class="field">
-              <label for="name">Plant Name:</label>
-              <input type="text" id="name" placeholder="Plant name" />
+              <br><label for="name">Plant Name:</label>
+              <input type="text" id="input" placeholder="Enter Plant name" />
+
 
             </div>
 
             <div class="field">
-              <label for="sun">Sun:</label>
-              <input type="text" id="sun" placeholder="Enter light requirement" />
+              <label for="light">Light:</label>
+              <input type="text" id="input" placeholder="Enter light requirement" />
 
             </div>
 
             <div class="field">
               <label for="water">Water:</label>
-              <input type="text" id="water" placeholder="Enter water requirement" />
+              <input type="text" id="input" placeholder="Enter water requirement" />
 
             </div>
 
             <div class="field">
-              <label for="soil">Soil:</label>
-              <input type="text" id="soil" placeholder="Enter soil preference" />
+              <label for="temperature">Temperature:</label>
+              <input type="text" id="input" placeholder="Enter temperature preference" />
 
             </div>
 
+            <div class="field">
+              <label for="humidity">Humidity:</label>
+              <input type="text" id="input" placeholder="Enter humidity preference" />
+
+            </div>
+
+            <div class="field">
+              <label for="feed">Feed:</label>
+              <input type="text" id="input" placeholder="Enter feed instructions" />
 
 
+            </div>
 
-        </div>
+            <div class="field">
+              <label for="height-growth">Height and Growth Rate:</label>
+              <input type="text" id="input" placeholder="Enter height and growth information" />
 
-        <input class="ui basic green button" type="submit" id="save" value="Add Plant" />
+            </div>
+
+            <div class="field">
+              <label for="toxicity">Toxicity:</label>
+              <input type="text" id="input" placeholder="Enter toxicity information" />
+
+            </div>
+
+            <div class="field">
+              <label for="origin">Origin:</label>
+              <input type="text" id="input" placeholder="Enter plant origin" />
+
+            </div>
+
+            <h3>Plant Schedule:</h3>
+
+            <div class="field">
+              <label for="monday">Monday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="tuesday">Tuesday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="wednesday">Wednesday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="thursday">Thursday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="friday">Friday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="saturday">Saturday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div>
+
+            <div class="field">
+              <label for="sunday">Sunday:</label>
+              <input type="text" id="input" placeholder="Enter task, e.g. water, replant" />
+
+            </div></br>
+
+            <div class="field">
+              <label for="image">Image:</label>
+              <input type="text" id="input" placeholder="Enter image path" />
+
+            </div></br>
+
+
+          </div>
+
+        <input class="ui olive button" type="submit" id="save" value="Add Plant" />
 
       </form>
 
-      <h4 class="ui horizontal divider header">
-        <i class="circular tree icon"></i>
-        House Plants
+      <h4 class="ui horizontal divider header" id="divider">
+        <i class="circular olive leaf icon"></i>
       </h4>
 
-      <div id="flowers-container" class="ui cards"></div>
+      <div id="flowers-container" class="ui cards"></div></br>
+
+
+
+
+
+
+        <table id="table-container" class="ui olive table">
+          <!-- <thead class="table-header">
+            <tr>
+              <th>Plant</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+              <th>Saturday</th>
+              <th>Sunday</th>
+            </tr>
+          </thead> -->
+
+        </table>
+
+
 
       </div>
   </body>

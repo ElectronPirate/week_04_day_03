@@ -7,6 +7,20 @@ class Flowers{
     this.data = null;
   }
 
+  bindEvents(){
+    PubSub.subscribe('FlowerView:flower-deleted', (event) => {
+      const flowerId = event.detail;
+      this.deleteFlower(flowerId);
+    })
+  }
+
+  // bindEvents(){
+  //   PubSub.subscribe('FlowerView:flower-updated', (event) => {
+  //     const flowerId = event.detail;
+  //     this.updateFlower(flowerId);
+  //   })
+  // }
+
   getData() {
       const url = `http://localhost:3000/flowers`;
       const request = new RequestHelper(url);
@@ -30,6 +44,29 @@ class Flowers{
       })
       .catch(console.error);
   }
+
+    deleteFlower(flowerId){
+      const url = `http://localhost:3000/flowers/${flowerId}`;
+      const request = new RequestHelper(url);
+      request.delete(flowerId)
+        .then((flowers) => {
+          PubSub.publish('Flowers:flower-data-loaded', flowers);
+        })
+        .catch(console.error);
+    }
+
+    
+
+    // updateFlower(flowerId){
+    //   const url = `http://localhost:3000/flowers/${flowerId}`;
+    //   const request = new RequestHelper(url);
+    //   request.update(flowerId)
+    //   .then((flowers) => {
+    //     PubSub.publish('Flowers:flower-data-loaded', flowers);
+    //
+    //   })
+    //   .catch(console.error);
+    // }
 
 
 
