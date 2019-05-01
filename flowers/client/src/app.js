@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const flowers = new Flowers();
-    flowers.showHide();
+
     flowers.getData();
     flowers.bindEvents();
   });
