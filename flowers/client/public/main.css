@@ -143,7 +143,8 @@ nav ul li a:hover::after{
 #flower-form{
   /* visibility: hidden; */
   display: none;
-  background-color: pink;
+  background-color: rgb(255,192,203,0.9);
+
 }
 
 #flowers-container{
@@ -158,6 +159,8 @@ nav ul li a:hover::after{
   /* visibility: hidden; */
   display: none;
   overflow-y: auto!important;
+  table-layout: fixed;
+  width: 100%;
 
 
 }
@@ -186,7 +189,15 @@ td{
 
 
 #divider{
-  display:none;
+  font-size: 20px;
+
+}
+
+#save{
+  position: relative!important;
+  left:45%!important;
+  font-size: 20px!important;
+  
 }
 
 h1{
@@ -197,8 +208,15 @@ h1{
 
 }
 
+
+
+
+
+
+
 .field{
-  font-size: 17px;
+  font-size: 22px;
+
 }
 
 
@@ -214,10 +232,7 @@ h1{
   text-align: left;
 }
 
-#table-container{
-  table-layout: fixed;
-  width: 100%;
-}
+
 
 .table-header{
   font-size: 16px;
