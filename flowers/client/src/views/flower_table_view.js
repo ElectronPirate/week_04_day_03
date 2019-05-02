@@ -90,94 +90,101 @@ class FlowerTableView{
 
 
     createTableRow(flower){
-    const row = document.createElement('tr');
-    row.classList.add('row');
+      const row = document.createElement('tr');
+      row.classList.add('row');
 
     // row.innerHTML = `<span class="table-image-text">${flower.name}</span>`;
 
     // const table = document.querySelector('#table-container');
     // table.classList.add("ui", "fixed", "table");
 
-
-    const tableData = document.createElement('td');
-    tableData.classList.add('tableData');
-    // tableData.src = `images/${flower.image}`;
-    // tableData.innerHTML = `<span class="table-image-text">${flower.name}</span>`;
-
-    const tableName = document.createElement('td');
-    tableName.classList.add('tableName');
-    tableName.innerHTML = `<span class="table-image-text">${flower.name}</span>`;
-
-    const tableMon = document.createElement('td');
-    tableMon.classList.add('tableMon');
-    tableMon.innerHTML = `<span class="table-task-text">${flower.monday}</span>`;
-
-    const tableTue = document.createElement('td');
-    tableTue.classList.add('tableTue');
-    tableTue.innerHTML = `<span class="table-task-text">${flower.tuesday}</span>`;
-
-    const tableWed = document.createElement('td');
-    tableWed.classList.add('tableWed');
-    tableWed.innerHTML = `<span class="table-task-text">${flower.wednesday}</span>`;
-
-    const tableThu = document.createElement('td');
-    tableThu.classList.add('tableThu');
-    tableThu.innerHTML = `<span class="table-task-text">${flower.thursday}</span>`;
-
-    const tableFri = document.createElement('td');
-    tableFri.classList.add('tableFri');
-    tableFri.innerHTML = `<span class="table-task-text">${flower.friday}</span>`;
-
-    const tableSat = document.createElement('td');
-    tableSat.classList.add('tableSat');
-    tableSat.innerHTML = `<span class="table-task-text">${flower.saturday}</span>`;
-
-    const tableSun = document.createElement('td');
-    tableSun.classList.add('tableSun');
-    tableSun.innerHTML = `<span class="table-task-text">${flower.sunday}</span>`;
+      function displayTask(dayValue){
+        if(dayValue){
+          return dayValue;
+        }
+        return "";
+      }
 
 
+      const tableData = document.createElement('td');
+      tableData.classList.add('tableData');
+      // tableData.src = `images/${flower.image}`;
+      // tableData.innerHTML = `<span class="table-image-text">${flower.name}</span>`;
 
-    const imageDiv = document.createElement('div');
+      const tableName = document.createElement('td');
+      tableName.classList.add('tableName');
+      tableName.innerHTML = `<span class="table-image-text">${displayTask(flower.name)}</span>`;
 
+      const tableMon = document.createElement('td');
+      tableMon.classList.add('tableMon');
+      tableMon.innerHTML = `<span class="table-task-text">${displayTask(flower.monday)}</span>`;
 
-    const image = document.createElement('img');
-    image.classList.add("ui", "fluid", "image");
+      const tableTue = document.createElement('td');
+      tableTue.classList.add('tableTue');
+      tableTue.innerHTML = `<span class="table-task-text">${displayTask(flower.tuesday)}</span>`;
 
-    if(!flower.image){
-      image.src = `images/piranhaPlant.jpg`
-    }else{
-      image.src = `images/${flower.image}`;
-    }
+      const tableWed = document.createElement('td');
+      tableWed.classList.add('tableWed');
+      tableWed.innerHTML = `<span class="table-task-text">${displayTask(flower.wednesday)}</span>`;
+
+      const tableThu = document.createElement('td');
+      tableThu.classList.add('tableThu');
+      tableThu.innerHTML = `<span class="table-task-text">${displayTask(flower.thursday)}</span>`;
+
+      const tableFri = document.createElement('td');
+      tableFri.classList.add('tableFri');
+      tableFri.innerHTML = `<span class="table-task-text">${displayTask(flower.friday)}</span>`;
+
+      const tableSat = document.createElement('td');
+      tableSat.classList.add('tableSat');
+      tableSat.innerHTML = `<span class="table-task-text">${displayTask(flower.saturday)}</span>`;
+
+      const tableSun = document.createElement('td');
+      tableSun.classList.add('tableSun');
+      tableSun.innerHTML = `<span class="table-task-text">${displayTask(flower.sunday)}</span>`;
 
 
 
+      const imageDiv = document.createElement('div');
+
+
+      const image = document.createElement('img');
+      image.classList.add("ui", "fluid", "image");
+
+      if(!flower.image){
+        image.src = `images/piranhaPlant.jpg`
+      }else{
+        image.src = `images/${flower.image}`;
+      }
 
 
 
 
 
 
-    row.appendChild(tableData);
-    tableData.appendChild(imageDiv);
-    imageDiv.appendChild(image);
-    tableData.appendChild(tableName);
-
-    row.appendChild(tableMon);
-    row.appendChild(tableTue);
-    row.appendChild(tableWed);
-    row.appendChild(tableThu);
-    row.appendChild(tableFri);
-    row.appendChild(tableSat);
-    row.appendChild(tableSun);
 
 
 
-    // table.appendChild(row);
+      row.appendChild(tableData);
+      tableData.appendChild(imageDiv);
+      imageDiv.appendChild(image);
+      tableData.appendChild(tableName);
 
-    // table.appendChild(row);
+      row.appendChild(tableMon);
+      row.appendChild(tableTue);
+      row.appendChild(tableWed);
+      row.appendChild(tableThu);
+      row.appendChild(tableFri);
+      row.appendChild(tableSat);
+      row.appendChild(tableSun);
 
-    return row;
+
+
+      // table.appendChild(row);
+
+      // table.appendChild(row);
+
+      return row;
 
 
     }

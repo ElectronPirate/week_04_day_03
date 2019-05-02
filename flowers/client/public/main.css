@@ -160,14 +160,11 @@ th{
 td:nth-child(8n+1) {
   background-color: pink;
 
-
-
 }
 
 
-
-.pink{
-  background-color: pink;
+td{
+  text-align: center !important;
 }
 
 
