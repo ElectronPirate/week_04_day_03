@@ -37,16 +37,30 @@ class ShowHideView{
   showAddPlantForm(){
     const plantForm = document.querySelector('#flower-form');
     plantForm.style.display = 'block';
+    const hidecardForm = document.querySelector('#flowers-container');
+    hidecardForm.style.display = 'none';
+    const hidePlantCalendar = document.querySelector('#table-container');
+    hidePlantCalendar.style.display = 'none';
+
   }
 
   showPlantCards(){
     const cardForm = document.querySelector('#flowers-container');
     cardForm.style.display = 'inline-flex';
+    const hidePlantCalendar = document.querySelector('#table-container');
+    hidePlantCalendar.style.display = 'none';
+    const hidePlantForm = document.querySelector('#flower-form');
+    hidePlantForm.style.display = 'none';
   }
 
   showPlantSchedule(){
     const plantCalendar = document.querySelector('#table-container');
     plantCalendar.style.display = 'table';
+    const hidecardForm = document.querySelector('#flowers-container');
+    hidecardForm.style.display = 'none';
+    const hidePlantForm = document.querySelector('#flower-form');
+    hidePlantForm.style.display = 'none';
+
   }
 
 

@@ -130,7 +130,6 @@ nav ul li a:hover::after{
 
 
 
-
 .card-property{
   font-weight: 600;
   color: black;
@@ -150,6 +149,8 @@ nav ul li a:hover::after{
 #flowers-container{
   /* visibility: hidden; */
   display: none;
+  position: relative!important;
+  left: 10%!important;
 
 
 }
