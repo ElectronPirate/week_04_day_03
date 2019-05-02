@@ -142,7 +142,7 @@ class FlowerTableView{
 
 
     const image = document.createElement('img');
-    image.classList.add("ui", "tiny", "image");
+    image.classList.add("ui", "fluid", "image");
 
     if(!flower.image){
       image.src = `images/piranhaPlant.jpg`

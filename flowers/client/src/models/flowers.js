@@ -55,12 +55,12 @@ class Flowers{
         .catch(console.error);
     }
 
-    
 
-    // updateFlower(flowerId){
+
+    // updateFlower(flower){
     //   const url = `http://localhost:3000/flowers/${flowerId}`;
     //   const request = new RequestHelper(url);
-    //   request.update(flowerId)
+    //   request.put()
     //   .then((flowers) => {
     //     PubSub.publish('Flowers:flower-data-loaded', flowers);
     //

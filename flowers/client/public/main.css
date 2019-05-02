@@ -147,8 +147,30 @@ nav ul li a:hover::after{
 }
 
 #table-container{
-  display:none;
+  /* display:none; */
+
 }
+
+
+th{
+  background-color: pink !important;
+  text-align: center !important;
+}
+
+td:nth-child(8n+1) {
+  background-color: pink;
+
+
+
+}
+
+
+
+.pink{
+  background-color: pink;
+}
+
+
 
 #divider{
   display:none;
