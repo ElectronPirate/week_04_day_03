@@ -15,36 +15,38 @@ class ShowHideView{
     this.addPlant.addEventListener('click', () => {
 
       this.showAddPlantForm();
-      PubSub.publish('ShowHideView:button-clicked');
-    })
-  }
 
-  bindEvents(){
+    })
     this.plants.addEventListener('click', () => {
       this.showPlantCards();
-      PubSub.publish('ShowHideView:button-clicked');
+
+
+    })
+    this.tracker.addEventListener('click', () => {
+      this.showPlantSchedule();
+
     })
   }
 
-  bindEvents(){
-    this.tracker.addEventListener('click', () => {
-      this.showPlantSchedule();
-      PubSub.publish('ShowHideView:button-clicked');
-    })
-  }
+
+
+
 
 
 
   showAddPlantForm(){
-    this.addPlant.style.display = 'visible';
+    const plantForm = document.querySelector('#flower-form');
+    plantForm.style.display = 'block';
   }
 
   showPlantCards(){
-    this.plants.style.display = 'visible';
+    const cardForm = document.querySelector('#flowers-container');
+    cardForm.style.display = 'inline-flex';
   }
 
   showPlantSchedule(){
-    this.tracker.style.display = 'visible';
+    const plantCalendar = document.querySelector('#table-container');
+    plantCalendar.style.display = 'table';
   }
 
 
