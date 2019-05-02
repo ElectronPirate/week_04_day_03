@@ -149,8 +149,7 @@ nav ul li a:hover::after{
 #flowers-container{
   /* visibility: hidden; */
   display: none;
-  position: relative!important;
-  left: 10%!important;
+
 
 
 }
@@ -158,6 +157,7 @@ nav ul li a:hover::after{
 #table-container{
   /* visibility: hidden; */
   display: none;
+  overflow-y: auto!important;
 
 
 }
@@ -168,6 +168,8 @@ nav ul li a:hover::after{
 th{
   background-color: pink !important;
   text-align: center !important;
+  position: sticky!important;
+  top: 0!important;
 }
 
 td:nth-child(8n+1) {
@@ -178,6 +180,7 @@ td:nth-child(8n+1) {
 
 td{
   text-align: center !important;
+  font-size: 20px !important;
 }
 
 

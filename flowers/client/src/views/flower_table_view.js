@@ -1,3 +1,4 @@
+const {displayTask} = require('../helpers/display_helper.js');
 const PubSub = require('../helpers/pub_sub.js');
 
 class FlowerTableView{
@@ -98,12 +99,12 @@ class FlowerTableView{
     // const table = document.querySelector('#table-container');
     // table.classList.add("ui", "fixed", "table");
 
-      function displayTask(dayValue){
-        if(dayValue){
-          return dayValue;
-        }
-        return "";
-      }
+      // function displayTask(dayValue){
+      //   if(dayValue){
+      //     return dayValue;
+      //   }
+      //   return "";
+      // }
 
 
       const tableData = document.createElement('td');
